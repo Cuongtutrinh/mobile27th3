@@ -11,6 +11,11 @@ const SignInScreen = ({ navigation }) => {
       {/* Tiêu đề */}
       <Text style={styles.title}>Get your groceries with Nectar</Text>
 
+      <Image 
+        source={require("../assets/co.png")}
+        style={styles.flag} 
+      />
+
       {/* Số điện thoại */}
       <Text style={styles.phoneNumber}>+880</Text>
 
@@ -24,6 +29,11 @@ const SignInScreen = ({ navigation }) => {
       <TouchableOpacity style={styles.googleButton}>
         <FontAwesome name="google" size={20} color="#fff" style={styles.icon} />
         <Text style={styles.buttonText}>Continue with Google</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity style={styles.facebookButton}>
+        <FontAwesome name="facebook" size={20} color="#fff" style={styles.icon} />
+        <Text style={styles.buttonText}>Continue with Facebook</Text>
       </TouchableOpacity>
 
       {/* Nút Phone (Thay thế Facebook) */}
@@ -45,7 +55,7 @@ const styles = StyleSheet.create({
   },
   image: {
     width: "100%",
-    height: 200,
+    height: 300,
     resizeMode: "contain",
   },
   title: {
@@ -58,6 +68,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "bold",
     marginTop: 10,
+    marginLeft: -200,
   },
   separator: {
     width: "100%",
@@ -88,6 +99,7 @@ const styles = StyleSheet.create({
     width: "100%",
     borderRadius: 8,
     justifyContent: "center",
+    marginTop: 3,
   },
   icon: {
     marginRight: 10,
@@ -96,6 +108,26 @@ const styles = StyleSheet.create({
     color: "#fff",
     fontSize: 16,
     fontWeight: "bold",
+  },
+
+  flag: {
+    width: 24, 
+    height: 16,
+    marginRight: 5, 
+    marginBottom: -30,
+    marginLeft:-280,
+  },
+
+  facebookButton: {
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "#4285F4",
+    paddingVertical: 15,
+    width: "100%",
+    borderRadius: 8,
+    justifyContent: "center",
+    marginBottom: 10,
+    marginTop: 3,
   },
 });
 

@@ -3,6 +3,7 @@ import {
   View,
   Text,
   TextInput,
+  Image,
   StyleSheet,
   TouchableOpacity,
   KeyboardAvoidingView,
@@ -28,13 +29,17 @@ const NumberScreen = ({ navigation }) => {
           </TouchableOpacity>
 
           {/* Tiêu đề */}
-          <Text style={styles.title}>Enter your{"\n"}mobile number</Text>
+          <Text style={styles.title}>Enter your mobile number</Text>
 
           {/* Label "Mobile Number" */}
           <Text style={styles.label}>Mobile Number</Text>
 
           {/* Ô nhập số điện thoại */}
           <View style={styles.inputContainer}>
+             <Image 
+              source={require("../assets/co.png")}
+              style={styles.flag} 
+            />   
             <Text style={styles.countryCode}>+880</Text>
             <TextInput
               style={styles.input}
@@ -99,6 +104,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "bold",
     marginRight: 10,
+    marginLeft: 5,
   },
   input: {
     flex: 1,
